@@ -379,3 +379,7 @@ func Commands(options ...micro.Option) []*cli.Command {
 
 	return []*cli.Command{command}
 }
+
+func NewResolver(srvType, namespaceStr string) *namespace.Resolver {
+  return namespace.NewResolver(srvType, namespaceStr)
+}
