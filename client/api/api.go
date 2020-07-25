@@ -344,3 +344,7 @@ func init() {
 		},
 	})
 }
+
+func NewResolver(srvType, namespaceStr string) *namespace.Resolver {
+  return namespace.NewResolver(srvType, namespaceStr)
+}
