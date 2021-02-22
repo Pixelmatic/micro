@@ -13,7 +13,6 @@ import (
 	"github.com/micro/micro/v2/client/cli/token"
 	"github.com/micro/micro/v2/client/cli/util"
 	"github.com/micro/micro/v2/internal/report"
-	platform "github.com/micro/micro/v2/platform/cli"
 	"golang.org/x/crypto/ssh/terminal"
 )
 
@@ -21,9 +20,9 @@ import (
 // For documentation of the flow please refer to https://github.com/micro/development/pull/223
 func login(ctx *cli.Context) error {
 	// assuming --otp go to platform.Signup
-	if isOTP := ctx.Bool("otp"); isOTP {
-		return platform.Signup(ctx)
-	}
+	// if isOTP := ctx.Bool("otp"); isOTP {
+	// 	return platform.Signup(ctx)
+	// }
 
 	// otherwise assume username/password login
 
